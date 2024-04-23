@@ -3,107 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prisoner Management System</title>
+<title>Prisoner Information</title>
 <style>
   body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-image: url('file:///C:/Users/GYAN%20BHANDAR/Downloads/photo-incandescence-infrared-lamp-closeup-home-heating-system-idea-space-heating-with-modern-electrical-appliances_166373-3462.jpg'); /* Replace 'background-image.jpg' with the path to your image */
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
   }
 
-  .container {
-    width: 400px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7); /* Add opacity to the background */
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .form-group {
+  table {
+    width: 100%;
+    border-collapse: collapse;
     margin-bottom: 20px;
+    background-color: white;
   }
 
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
   }
 
-  .form-group input[type="text"],
-  .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-
-  .btn-submit {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-
-  .btn-submit:hover {
-    background-color: #0056b3;
+  th {
+    background-color: #f2f2f2;
   }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <h2>Crime Management System</h2>
-  <form id="prisoner-form">
-    <div class="form-group">
-      <label for="prisoner-id">Prisoner ID:</label>
-      <input type="text" id="prisoner-id" name="prisoner-id" placeholder="Enter Prisoner ID" required>
-    </div>
-    <div class="form-group">
-      <label for="fir-id">FIR ID:</label>
-      <input type="text" id="fir-id" name="fir-id" placeholder="Enter FIR ID" required>
-    </div>
-  
-    <div class="form-group">
-      <label for="crime-id">Crime ID:</label>
-      <input type="text" id="crime-id" name="crime-id" placeholder="Enter Crime ID" required>
-    </div>
-    <div class="form-group">
-      <label for="court">Court:</label>
-      <select id="court" name="court" required>
-        <option value="">Select Court</option>
-        <option value="District Court">District Court</option>
-        <option value="High Court">High Court</option>
-        <option value="Supreme Court">Supreme Court</option>
-      </select>
-    </div>
-    <button type="submit" class="btn-submit">Submit</button>
-  </form>
-</div>
+<h2>Prisoner Information</h2>
 
-<script>
-  document.getElementById('prisoner-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var prisonerId = document.getElementById('prisoner-id').value;
-    var firId = document.getElementById('fir-id').value;
-    var crimeId = document.getElementById('crime-id').value;
-    var court = document.getElementById('court').value;
-
-    // Here you can add your logic to handle the form submission
-    // For demonstration purpose, let's just alert the values
-    alert("Prisoner ID: " + prisonerId + "\nFIR ID: " + firId + "\nFIR Description: " + firDescription + "\nCrime ID: " + crimeId + "\nCourt: " + court);
-  });
-</script>
+<table>
+  <tr>
+    <th>Prisoner Name</th>
+    <th>Prisoner ID</th>
+    <th>FIR ID</th>
+    <th>FIR Description</th>
+    <th>Crime ID</th>
+    <th>Crime Place</th>
+    <th>Crime Type</th>
+    <th>Court</th>
+  </tr>
+  <tr>
+    <td>John Doe</td>
+    <td>P12345</td>
+    <td>FIR123</td>
+    <td>Shoplifting at ABC Mart</td>
+    <td>C98765</td>
+    <td>Main Street</td>
+    <td>Theft</td>
+    <td>District Court</td>
+  </tr>
+  <tr>
+    <td>Jane Smith</td>
+    <td>P56789</td>
+    <td>FIR456</td>
+    <td>Breaking and Entering into a Residential Property</td>
+    <td>C12345</td>
+    <td>City Mall</td>
+    <td>Burglary</td>
+    <td>High Court</td>
+  </tr>
+  <tr>
+    <td>Michael Johnson</td>
+    <td>P67890</td>
+    <td>FIR789</td>
+    <td>Assault and Battery at Park Avenue</td>
+    <td>C23456</td>
+    <td>Park Avenue</td>
+    <td>Assault</td>
+    <td>District Court</td>
+  </tr>
+  <tr>
+    <td>Sarah Brown</td>
+    <td>P24680</td>
+    <td>FIR135</td>
+    <td>Drug Possession on Elm Street</td>
+    <td>C54321</td>
+    <td>Elm Street</td>
+    <td>Drug Possession</td>
+    <td>High Court</td>
+  </tr>
+  <tr>
+    <td>David Lee</td>
+    <td>P98765</td>
+    <td>FIR246</td>
+    <td>Robbery at the Bank of City</td>
+    <td>C87654</td>
+    <td>Bank of City</td>
+    <td>Robbery</td>
+    <td>Supreme Court</td>
+  </tr>
+  <tr>
+    <td>Emily White</td>
+    <td>P34567</td>
+    <td>FIR357</td>
+    <td>Forgery of Documents at Government Office</td>
+    <td>C76543</td>
+    <td>Government Office</td>
+    <td>Forgery</td>
+    <td>District Court</td>
+  </tr>
+  <tr>
+    <td>Christopher Taylor</td>
+    <td>P54321</td>
+    <td>FIR468</td>
+    <td>Embezzlement of Funds from Corporation XYZ</td>
+    <td>C65432</td>
+    <td>Corporation XYZ</td>
+    <td>Embezzlement</td>
+    <td>High Court</td>
+  </tr>
+  <tr>
+    <td>Alice Johnson</td>
+    <td>P98765</td>
+    <td>FIR579</td>
+    <td>Arson at City Library</td>
+    <td>C98765</td>
+    <td>City Library</td>
+    <td>Arson</td>
+    <td>Supreme Court</td>
+  </tr>
+  <tr>
+    <td>Robert Davis</td>
+    <td>P23456</td>
+    <td>FIR681</td>
+    <td>Extortion of Money from Local Business Owners</td>
+    <td>C87654</td>
+    <td>Main Street</td>
+    <td>Extortion</td>
+    <td>District Court</td>
+  </tr>
+  <tr>
+    <td>Grace Martinez</td>
+    <td>P78901</td>
+    <td>FIR792</td>
+    <td>Kidnapping of a Minor from School</td>
+    <td>C65432</td>
+    <td>School</td>
+    <td>Kidnapping</td>
+    <td>High Court</td>
+  </tr>
+</table>
 
 </body>
 </html>
-
