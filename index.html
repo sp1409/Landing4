@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prisoner Management System</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('file:///C:/Users/GYAN%20BHANDAR/Downloads/photo-incandescence-infrared-lamp-closeup-home-heating-system-idea-space-heating-with-modern-electrical-appliances_166373-3462.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Add opacity to the background */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .form-group input[type="text"],
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Crime Management System</h2>
+  <form id="prisoner-form">
+    <div class="form-group">
+      <label for="prisoner-id">Prisoner ID:</label>
+      <input type="text" id="prisoner-id" name="prisoner-id" placeholder="Enter Prisoner ID" required>
+    </div>
+    <div class="form-group">
+      <label for="fir-id">FIR ID:</label>
+      <input type="text" id="fir-id" name="fir-id" placeholder="Enter FIR ID" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="crime-id">Crime ID:</label>
+      <input type="text" id="crime-id" name="crime-id" placeholder="Enter Crime ID" required>
+    </div>
+    <div class="form-group">
+      <label for="court">Court:</label>
+      <select id="court" name="court" required>
+        <option value="">Select Court</option>
+        <option value="District Court">District Court</option>
+        <option value="High Court">High Court</option>
+        <option value="Supreme Court">Supreme Court</option>
+      </select>
+    </div>
+    <button type="submit" class="btn-submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('prisoner-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var prisonerId = document.getElementById('prisoner-id').value;
+    var firId = document.getElementById('fir-id').value;
+    var crimeId = document.getElementById('crime-id').value;
+    var court = document.getElementById('court').value;
+
+    // Here you can add your logic to handle the form submission
+    // For demonstration purpose, let's just alert the values
+    alert("Prisoner ID: " + prisonerId + "\nFIR ID: " + firId + "\nFIR Description: " + firDescription + "\nCrime ID: " + crimeId + "\nCourt: " + court);
+  });
+</script>
+
+</body>
+</html>
+
